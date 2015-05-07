@@ -1,5 +1,3 @@
-require "formula"
-
 class Python33 < Formula
   homepage "https://www.python.org/"
   url "https://www.python.org/ftp/python/3.3.6/Python-3.3.6.tar.xz"
