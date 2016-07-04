@@ -13,7 +13,7 @@ matrix:
     # OS X 10.9
     - os: osx
       osx_image: beta-xcode6.2
-before_install:
+install:
   - brew update
 script:
   - brew audit --strict ./*.rb
