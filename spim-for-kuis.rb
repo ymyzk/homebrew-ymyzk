@@ -9,7 +9,7 @@ class SpimForKuis < Formula
   conflicts_with "spim"
 
   bottle do
-    root_url "https://github.com/ymyzk/spim-for-kuis/releases/download/v9.1.17.1/"
+    root_url "https://github.com/ymyzk/spim-for-kuis/releases/download/v9.1.17.1"
     sha256 "e485c4d369663c2884a8b92b0940fc28f0de3d7ddd7b8ccb0343bf857332618a" => :el_capitan
   end
 
