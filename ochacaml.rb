@@ -6,7 +6,7 @@ class Ochacaml < Formula
   version "20140414"
 
   patch do
-    url "https://gist.github.com/ymyzk/aea4dee6951076f57254/raw/4a881a79c7909df1a4b339ffa25d2f114d8d491f/ochacaml_140414.diff"
+    url "https://github.com/ymyzk/ochacaml/raw/140414/ochacaml.diff"
     sha256 "c4ee52d2199ae7f7e9a4387b740e94653e9e458f6ca7da6f26fd6547fdfc48d9"
   end
 
