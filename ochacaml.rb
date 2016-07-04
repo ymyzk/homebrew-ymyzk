@@ -2,8 +2,8 @@ class Ochacaml < Formula
   desc "Shift/reset-extension of Caml Light"
   homepage "http://www.is.ocha.ac.jp/~asai/OchaCaml/"
   url "http://caml.inria.fr/pub/distrib/caml-light-0.75/cl75unix.tar.gz"
-  sha256 "ac2ad4c7b28716ec3f0e2e24b8b092b99253a573ac8de7da396e08e8bcd10fd2"
   version "20140414"
+  sha256 "ac2ad4c7b28716ec3f0e2e24b8b092b99253a573ac8de7da396e08e8bcd10fd2"
 
   patch do
     url "https://github.com/ymyzk/ochacaml/raw/140414/ochacaml.diff"

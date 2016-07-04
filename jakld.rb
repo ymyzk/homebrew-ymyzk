@@ -2,12 +2,12 @@ class Jakld < Formula
   desc "Scheme System JAKLD with Picture Language"
   homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index-j.html"
   url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/all.jar"
-  sha256 "18a497b8462afde80cdb848cd5f93d3278e8791280cdff15a9cba4ff11ebb73c"
   version "20100725"
-
-  depends_on :java
+  sha256 "18a497b8462afde80cdb848cd5f93d3278e8791280cdff15a9cba4ff11ebb73c"
 
   option "with-picture-language", "Supports the picture language of SICP & tail-call optimizations"
+
+  depends_on :java
 
   if build.with? "picture-language"
     resource "picture-language" do
@@ -24,7 +24,7 @@ class Jakld < Formula
       jar_file_name = "all.jar"
       libexec.install jar_file_name
     end
-    bin.write_jar_script libexec/"#{jar_file_name}", "jakld"
+    bin.write_jar_script libexec/jar_file_name, "jakld"
   end
 
   test do
