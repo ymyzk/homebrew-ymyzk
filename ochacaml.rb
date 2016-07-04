@@ -10,6 +10,11 @@ class Ochacaml < Formula
     sha256 "c4ee52d2199ae7f7e9a4387b740e94653e9e458f6ca7da6f26fd6547fdfc48d9"
   end
 
+  bottle do
+    root_url "https://github.com/ymyzk/ochacaml/releases/download/140414"
+    sha256 "c6dbc694c02a6d129a11e2fc893ed83eb34fb8e09c2615d07b72e65a0cc59d98" => :el_capitan
+  end
+
   def install
     cd "src"
 
