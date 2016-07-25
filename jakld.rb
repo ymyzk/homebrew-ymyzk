@@ -17,7 +17,7 @@ class Jakld < Formula
     sha256 "05cd0cd2606d4c26b51081714a96d19bea48da78dc812bf434f6b53740d2eac2"
   else
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/all.tar.gz"
-    version "20100725"
+    version "20021019"
     sha256 "235e4dd26c0daf6e4fe46e18dab044ab371e039e5c3114543a50d96574ab40f5"
   end
 
