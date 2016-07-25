@@ -8,9 +8,9 @@ class Jakld < Formula
   depends_on :java
 
   if build.with? "tail-recursive"
-    homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index-j.html"
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/zenbu.tar"
     version "20080903"
+    sha256 "29393bb365abeb10cd0aed42c4a56e8268fc33511c56572749c25f0fee1d8058"
   elsif build.with? "picture-language"
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/jakld.jar"
     version "20100725"
