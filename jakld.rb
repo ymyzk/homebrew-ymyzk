@@ -1,29 +1,50 @@
 class Jakld < Formula
-  desc "Scheme System JAKLD with Picture Language"
-  homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index-j.html"
-  url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/all.jar"
-  version "20100725"
-  sha256 "18a497b8462afde80cdb848cd5f93d3278e8791280cdff15a9cba4ff11ebb73c"
+  desc "JAKLD"
+  homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index.html"
 
-  option "with-picture-language", "Supports the picture language of SICP & tail-call optimizations"
+  option "with-tail-recursive", "Supports tail recursive optimization"
+  option "with-picture-language", "Supports the picture language of SICP & tail recursive optimization"
 
   depends_on :java
 
-  if build.with? "picture-language"
-    resource "picture-language" do
-      url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/jakld.jar"
-      sha256 "05cd0cd2606d4c26b51081714a96d19bea48da78dc812bf434f6b53740d2eac2"
-    end
+  if build.with? "tail-recursive"
+    homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index-j.html"
+    url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/zenbu.tar"
+    version "20080903"
+  elsif build.with? "picture-language"
+    url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/jakld.jar"
+    version "20100725"
+    sha256 "05cd0cd2606d4c26b51081714a96d19bea48da78dc812bf434f6b53740d2eac2"
+  else
+    url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/all.tar.gz"
+    version "20100725"
+    sha256 "235e4dd26c0daf6e4fe46e18dab044ab371e039e5c3114543a50d96574ab40f5"
   end
 
   def install
-    if build.with? "picture-language"
-      jar_file_name = "jakld.jar"
-      libexec.install resource("picture-language")
-    else
-      jar_file_name = "all.jar"
-      libexec.install jar_file_name
+    jar_file_name = "jakld.jar"
+    if build.without? "picture-language"
+      classes = [
+        "Char.class",
+        "Contin.class",
+        "Env.class",
+        "Eval.class",
+        "Function.class",
+        "IO.class",
+        "Lambda.class",
+        "List.class",
+        "Misc.class",
+        "Num.class",
+        "Pair.class",
+        "Subr.class",
+        "Symbol.class",
+      ]
+      if build.with? "tail-recursive"
+        classes.push "Call.class"
+      end
+      system "jar", "cfe", jar_file_name, "Eval", *classes
     end
+    libexec.install jar_file_name
     bin.write_jar_script libexec/jar_file_name, "jakld"
   end
 
