@@ -1,6 +1,7 @@
 class Jakld < Formula
   desc "JAKLD"
   homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index.html"
+  version "20100725"
 
   option "with-tail-recursive", "Supports tail recursive optimization"
   option "with-picture-language", "Supports the picture language of SICP & tail recursive optimization"
@@ -9,15 +10,12 @@ class Jakld < Formula
 
   if build.with? "tail-recursive"
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/zenbu.tar"
-    version "20080903"
     sha256 "29393bb365abeb10cd0aed42c4a56e8268fc33511c56572749c25f0fee1d8058"
   elsif build.with? "picture-language"
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/jakld.jar"
-    version "20100725"
     sha256 "05cd0cd2606d4c26b51081714a96d19bea48da78dc812bf434f6b53740d2eac2"
   else
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/all.tar.gz"
-    version "20021019"
     sha256 "235e4dd26c0daf6e4fe46e18dab044ab371e039e5c3114543a50d96574ab40f5"
   end
 
