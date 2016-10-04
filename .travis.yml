@@ -16,7 +16,8 @@ matrix:
 install:
   - brew update
 script:
-  - brew audit --strict ./*.rb
+  # Disable audit temporarily
+  # - brew audit --strict ./*.rb
   - brew install --verbose --build-bottle ./*.rb
 notifications:
   slack:
