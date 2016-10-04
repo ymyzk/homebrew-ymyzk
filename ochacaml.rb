@@ -12,6 +12,9 @@ class Ochacaml < Formula
 
   bottle do
     root_url "https://github.com/ymyzk/ochacaml/releases/download/140414"
+    cellar :any_skip_relocation
+    rebuild 1
+    sha256 "9f6b344abbdab1db7619b1f73a18fe81ca23e10988ad9cee59ff694a0d567fd4" => :sierra
     sha256 "c6dbc694c02a6d129a11e2fc893ed83eb34fb8e09c2615d07b72e65a0cc59d98" => :el_capitan
   end
 
