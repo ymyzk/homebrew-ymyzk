@@ -19,6 +19,7 @@ script:
   # Disable audit temporarily
   # - brew audit --strict ./*.rb
   - brew install --verbose --build-bottle ./*.rb
+  - brew git-gc
 notifications:
   slack:
     secure: WrySBafLCeBzbFEj1Z/Gj6GVZVC/TnnG/uDmdrfXRyViuAKgWgbyRDdlTGr17Qj3wSKKgU3KNDWLKcZELnfOyaQN6gbcYlJ6r585s2fdHorzgM9ScTwt9wefrEjAZ+5PvLMC4mBf1ve0BfHlKYqNPAuJsaQHMyp33sVG6Zpj8QQ=
