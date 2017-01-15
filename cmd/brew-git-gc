@@ -1,6 +1,6 @@
 #!/bin/bash
 get_repo_size() {
-  echo $(du -sk .git | awk '{print $1}')
+  du -sk .git | awk '{print $1}'
 }
 
 options="$@"
@@ -11,7 +11,7 @@ for dir in "$HOMEBREW_REPOSITORY" "$HOMEBREW_LIBRARY"/Taps/*/*; do
   [[ -d "$dir/.git" ]] || continue
   cd "$dir" || continue
 
-  echo $dir
+  echo "$dir"
 
   previous_size=$(get_repo_size)
   (( total_previous_size += previous_size ))
