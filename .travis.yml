@@ -18,6 +18,8 @@ matrix:
       osx_image: beta-xcode6.2
 install:
   - brew update
+  - mkdir -p /usr/local/Homebrew/Library/Taps/ymyzk/homebrew-ymyzk
+  - cp -r cmd /usr/local/Homebrew/Library/Taps/ymyzk/homebrew-ymyzk/
 script:
   # Disable audit temporarily
   # - brew audit --strict ./*.rb
