@@ -37,9 +37,7 @@ class Jakld < Formula
         "Subr.class",
         "Symbol.class",
       ]
-      if build.with? "tail-recursive"
-        classes.push "Call.class"
-      end
+      classes.push "Call.class" if build.with? "tail-recursive"
       system "jar", "cfe", jar_file_name, "Eval", *classes
     end
     libexec.install jar_file_name
