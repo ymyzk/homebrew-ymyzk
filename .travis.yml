@@ -2,6 +2,9 @@ language: ruby
 matrix:
   include:
     # See https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version
+    # macOS 10.12
+    - os: osx
+      osx_image: xcode8.3
     # OS X 10.11
     - os: osx
       osx_image: xcode8
@@ -15,6 +18,8 @@ matrix:
       osx_image: beta-xcode6.2
 install:
   - brew update
+  - mkdir -p /usr/local/Homebrew/Library/Taps/ymyzk/homebrew-ymyzk
+  - cp -r cmd /usr/local/Homebrew/Library/Taps/ymyzk/homebrew-ymyzk/
 script:
   # Disable audit temporarily
   # - brew audit --strict ./*.rb
