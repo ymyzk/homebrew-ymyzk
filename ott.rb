@@ -8,6 +8,8 @@ class Ott < Formula
   depends_on "ocaml"
 
   def install
+    ENV.deparallelize
+
     system "make", "world"
     bin.install "bin/ott"
   end
