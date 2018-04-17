@@ -25,7 +25,7 @@ class Ochacaml < Formula
     system "make", "world"
 
     libexec.install Dir["./*"]
-    (bin + "ochacaml").write <<-EOS.undent
+    (bin + "ochacaml").write <<~EOS
       #!/bin/bash
       srcdir=#{libexec}
       exec $srcdir/camlrun $srcdir/toplevel/camltop -stdlib $srcdir/lib $*
