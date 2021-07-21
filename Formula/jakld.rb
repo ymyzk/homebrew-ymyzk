@@ -1,5 +1,5 @@
 class Jakld < Formula
-  desc "JAKLD"
+  desc "Lisp Driver to be embedded in Java Applications"
   homepage "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/index.html"
   version "20100725"
 
@@ -54,6 +54,6 @@ class Jakld < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "echo | jakld"
   end
 end

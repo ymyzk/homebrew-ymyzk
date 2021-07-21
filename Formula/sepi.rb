@@ -1,5 +1,5 @@
 class Sepi < Formula
-  desc "The concurrent, message-passing programming language"
+  desc "Concurrent, message-passing programming language based on the pi-calculus"
   homepage "http://gloss.di.fc.ul.pt/sepi/"
   url "http://download.gloss.di.fc.ul.pt/sepi/terminal/sepi.jar"
   version "20150518"
