@@ -8,8 +8,8 @@ class SpimForKuis < Formula
   bottle do
     root_url "https://github.com/ymyzk/spim-for-kuis/releases/download/v9.1.17.1"
     rebuild 1
-    sha256 "0758e03658aa2802541fbe7c6525fe126c97e8c9c0efa7dace8b7bc2aac9d6a6" => :sierra
-    sha256 "e485c4d369663c2884a8b92b0940fc28f0de3d7ddd7b8ccb0343bf857332618a" => :el_capitan
+    sha256 sierra:     "0758e03658aa2802541fbe7c6525fe126c97e8c9c0efa7dace8b7bc2aac9d6a6"
+    sha256 el_capitan: "e485c4d369663c2884a8b92b0940fc28f0de3d7ddd7b8ccb0343bf857332618a"
   end
 
   conflicts_with "spim"
