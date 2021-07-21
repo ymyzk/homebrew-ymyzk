@@ -6,7 +6,7 @@ class Jakld < Formula
   option "with-tail-recursive", "Supports tail recursive optimization"
   option "with-picture-language", "Supports the picture language of SICP & tail recursive optimization"
 
-  depends_on :java
+  depends_on "openjdk"
 
   if build.with? "tail-recursive"
     url "http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/jakld/zenbu.tar"
