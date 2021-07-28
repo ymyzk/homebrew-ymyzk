@@ -1,3 +1,3 @@
 # homebrew-ymyzk
 
-[![Build Status](https://travis-ci.org/ymyzk/homebrew-ymyzk.svg?branch=master)](https://travis-ci.org/ymyzk/homebrew-ymyzk)
+[![Tests](https://github.com/ymyzk/homebrew-ymyzk/actions/workflows/tests.yml/badge.svg)](https://github.com/ymyzk/homebrew-ymyzk/actions/workflows/tests.yml)
